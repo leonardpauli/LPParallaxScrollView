@@ -101,6 +101,19 @@ MYViewController.m:
 
 ##More
 
+I've also included UIView+myExt.h/m that has some nice stuff in it. If you import it to a file, you will be able to use:
+
+- view.x = 10; // Short for view.frame.origin.x, settable!!
+- view.y
+- view.width
+- view.height
+- view.frameWithoutOrigin // CGRectMake(0, 0, self.width, self.height);
+- view.frameWithoutOrigin = rect; // Will just change width and height
+- - (UIImage*)captureViewAsImage // YES! You will ba able to take a retina/non-retina snapshoot of the view in less than one line!
+- view.forwardsTouches = NO; // Moahaha! The subviews will no longer feel touches!! (Usable for like image overlays)
+- - (void)setPointInsideBlock:(BOOL (^)(CGPoint point, UIEvent *event))pointInside; // Easiest way to make non-rectangle touchable buttons!
+
+
 The project is licenced under the MIT Licence included in this repo. If you plan to make an app of it, i would be glad if you told me about it!
 This text was written 31 july 2013, but the code was originally made by me 28 april, 2013.
 
