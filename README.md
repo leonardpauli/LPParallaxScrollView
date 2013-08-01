@@ -8,6 +8,7 @@ Parallax scrolling in iOS made easy!!
 
 - Open Xcode, create new project (iOS: Single View Application).
 - Select MYViewController.xib and delete it (Move to trash)
+
 - In MYAppDelegate.m, change
 
 	```Objective-C
@@ -20,12 +21,14 @@ Parallax scrolling in iOS made easy!!
 	self.viewController = [[MYViewController alloc] init];
 	```
 
+
 - Download this repo as zip, drag the folders "MYParallaxScrollView" and "Help files" into the project (sidebar)
 - Check "Copy items.." and "Create Groups..", hit return.
 - Click your project name in the sidebar
 - Make sure that portrait only is selected for now
 - Scroll down to frameworks
 - Press the + button and add the QuartzCore.framework.
+
 
 
 MYViewController.m:
