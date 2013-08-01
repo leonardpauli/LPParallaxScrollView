@@ -16,10 +16,12 @@ Parallax scrolling in iOS made easy!!
 
 		self.viewController = [[MYViewController alloc] init];
 
-- Download this repo as zip, drag the folder MYParallaxScrollView into the project (sidebar)
+- Download this repo as zip, drag the folders "MYParallaxScrollView" and "Help files" into the project (sidebar)
 - Check "Copy items.." and "Create Groups..", hit return.
 - Click your project name in the sidebar
 - Make sure that portrait only is selected for now
+- Scroll down to frameworks
+- Press the + button and add the QuartzCore.framework.
 
 
 MYViewController.m:
@@ -99,7 +101,7 @@ MYViewController.m:
 
 
 
-##More
+##UIView+myExt.h/m
 
 I've also included UIView+myExt.h/m that has some nice stuffs in it. If you import it to a file, you will be able to use these cool things:
 
@@ -124,6 +126,18 @@ I've also included UIView+myExt.h/m that has some nice stuffs in it. If you impo
 	// Easiest way to make non-rectangle touchable buttons! (or for like image overlays)
 	- (void)setPointInsideBlock:(BOOL (^)(CGPoint point, UIEvent *event))pointInside;
 
+
+##UIImage+Crop.h/m
+
+Apparently, the captureViewAsImage method required a crop method I had made in another extension when capturing the visible area of a scrollview. So here it is, included in the folder "Help files":
+
+    - (UIImage *)imageCroppedToRect:(CGRect)rect;
+	- (UIImage *)imageWithCornerRadius:(CGFloat)radius;
+
+Pretty self-explainable :) Also, this is why you'll need 
+
+
+##More
 
 The project is licenced under the MIT Licence included in this repo. If you plan to make an app of it, i would be glad if you told me about it!
 This text was written 31 july 2013, but the code was originally made by me 28 april, 2013.
