@@ -131,7 +131,7 @@ I've also included UIView+myExt.h/m that has some nice stuffs in it. If you impo
 
 Apparently, the captureViewAsImage method required a crop method I had made in another extension when capturing the visible area of a scrollview. So here it is, included in the folder "Help files":
 
-``òbj-c
+```Objective-C
 - (UIImage *)imageCroppedToRect:(CGRect)rect;
 - (UIImage *)imageWithCornerRadius:(CGFloat)radius;
 ```
